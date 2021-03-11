@@ -62,7 +62,7 @@ function guessLetter() {
 function solution(token){
   $.ajax({
     type: "GET",
-    url: "http://hangman-api.herokuapp.com/hangman",
+    url: "https://hangman-api.herokuapp.com/hangman",
     data: {token: token }
   }).done(function(data) {
     $('.hangman-word').text(data.solution);
@@ -77,7 +77,7 @@ function solution(token){
 function ajaxGuessLetter(token, letter) {
   $.ajax({
     type: "PUT",
-    url: "http://hangman-api.herokuapp.com/hangman",
+    url: "https://hangman-api.herokuapp.com/hangman",
     data: {token: token, letter: letter}
     }).done(function(data){
       console.log(data)
